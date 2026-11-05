@@ -38,7 +38,7 @@ def to_device(data, device):
         mels = torch.from_numpy(mels).float().to(device)
         mel_lens = torch.from_numpy(mel_lens).to(device)
         pitches = torch.from_numpy(pitches).float().to(device)
-        raw_text = " ".join(unicodedata.normalize("NFC", raw_text).replace("|", " ").split())
+        energies = torch.from_numpy(energies).float().to(device)
         durations = torch.from_numpy(durations).long().to(device)
 
         return (
