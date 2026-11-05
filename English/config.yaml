@@ -1,0 +1,121 @@
+# FastSpeech 2 - English (Svarah, Indian-accented English)
+# One file replaces ming024's preprocess.yaml + model.yaml + train.yaml.
+# ${DATA_ROOT} defaults to English/data; set FS2_DATA_ROOT to move it (Kaggle: /tmp/fs2).
+
+preprocess:
+  dataset: "Svarah"
+  path:
+    raw_path: "${DATA_ROOT}/raw_data"                # 22.05 kHz wav + .lab per utterance
+    preprocessed_path: "${DATA_ROOT}/preprocessed"   # TextGrid/, mel/, pitch/, energy/, duration/, train.txt, val.txt
+    lexicon_path: "${DATA_ROOT}/lexicon.txt"          # pronunciation dictionary for MFA
+
+  data:
+    hf_repo: "ai4bharat/Svarah"                       # gated: accept terms on HF + set HF_TOKEN
+    hf_token_env: "HF_TOKEN"
+    download_dir: "${DATA_ROOT}/hf_download"
+    audio_column: "audio_filepath"
+    text_column: "text"
+    # Svarah has no speaker-id column; the speaker metadata tuple identifies the 117 speakers
+    speaker_columns: ["gender", "age-group", "primary_language", "native_place_state",
+                      "native_place_district", "highest_qualification", "job_category",
+                      "occupation_domain"]
+    id_prefix: "sv"
+    min_duration: 1.0          # seconds
+    max_duration: 15.0
+    drop_noisiest_fraction: 0.10   # drop the 10 % of clips with the lowest SNR proxy
+    train_hours: 5.0
+    val_hours: 1.0
+    seed: 1234
+
+  alignment:
+    mode: "align"                                # use a pretrained acoustic model
+    pretrained_acoustic_model: "english_us_arpa" # MFA model name (ARPAbet with stress)
+    mfa_bin: "mfa"                               # or set the MFA_BIN env var
+    num_jobs: 4
+    beam: 100
+    retry_beam: 400
+
+  preprocessing:
+    text:
+      text_cleaners: []          # text is already normalised by the front-end
+      language: "en"
+    audio:
+      sampling_rate: 22050
+      max_wav_value: 32768.0
+    stft:
+      filter_length: 1024
+      hop_length: 256
+      win_length: 1024
+    mel:
+      n_mel_channels: 80
+      mel_fmin: 0
+      mel_fmax: 8000            # 8000 for the HiFi-GAN vocoder
+    pitch:
+      feature: "phoneme_level"  # 'phoneme_level' or 'frame_level'
+      normalization: True
+      f0_floor: 65.0
+      f0_ceil: 600.0
+    energy:
+      feature: "phoneme_level"
+      normalization: True
+    max_frames: 1550            # drop utterances longer than this (~18 s)
+    max_phone_frames: 100       # a non-silence phone longer than ~1.2 s = alignment failure
+    num_workers: 4              # feature-extraction processes
+
+model:
+  transformer:
+    encoder_layer: 4
+    encoder_head: 2
+    encoder_hidden: 256
+    decoder_layer: 6
+    decoder_head: 2
+    decoder_hidden: 256
+    conv_filter_size: 1024
+    conv_kernel_size: [9, 1]
+    encoder_dropout: 0.2
+    decoder_dropout: 0.2
+  variance_predictor:
+    filter_size: 256
+    kernel_size: 3
+    dropout: 0.5
+  variance_embedding:
+    pitch_quantization: "linear"
+    energy_quantization: "linear"
+    n_bins: 256
+  multi_speaker: auto           # Svarah is multi-speaker -> speaker embedding table
+  max_seq_len: 1600
+  vocoder:
+    model: "HiFi-GAN"
+    speaker: "universal"        # LJSpeech vocoder would bias towards one female voice
+
+train:
+  path:
+    ckpt_path: "./checkpoints"
+    log_path: "./logs"
+    result_path: "${ROOT_DIR}/Results/English"
+  optimizer:
+    batch_size: 16
+    group_size: 4
+    betas: [0.9, 0.98]
+    eps: 0.000000001
+    weight_decay: 0.0
+    grad_clip_thresh: 1.0
+    grad_acc_step: 1
+    warm_up_step: 4000
+    anneal_steps: [50000, 70000, 90000]
+    anneal_rate: 0.3
+  step:
+    total_step: 100000          # usually stopped earlier by --max_hours
+    log_step: 100
+    synth_step: 5000
+    val_step: 1000
+    save_step: 5000
+    keep_last: 2
+  num_workers: 2
+  use_amp: false
+
+inference:
+  test_sentences: "./test_sentences.txt"
+  output_dir: "${ROOT_DIR}/Results/English"
+  checkpoint: "best"            # best | latest | <step> | path/to/model.pth.tar
+  speaker: "auto"               # auto = speaker with the most training data
