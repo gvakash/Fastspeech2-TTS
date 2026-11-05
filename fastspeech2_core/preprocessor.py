@@ -139,7 +139,7 @@ class Preprocessor:
                     phone_counts[p] += 1
             n_frames[split] += n
             spk_frames[m["speaker"]][split] += n
-            lines[split].append(info + "|" + m["raw_text"])
+            lines[split].append(info + "|" + " ".join(m["raw_text"].split()))
 
         print("Computing statistic quantities ...")
         if self.pitch_normalization:

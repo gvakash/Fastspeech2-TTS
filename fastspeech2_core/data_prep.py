@@ -211,7 +211,7 @@ def prepare_corpus(cfg, frontend, overwrite=False):
             stats["drop_filter"] += 1
             continue
         raw_text = (row.get(text_col) or "").strip()
-        raw_text = unicodedata.normalize("NFC", raw_text).replace("|", " ")
+        raw_text = " ".join(unicodedata.normalize("NFC", raw_text).replace("|", " ").split())
         if not raw_text:
             stats["drop_empty_text"] += 1
             continue
