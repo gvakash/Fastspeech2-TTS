@@ -43,12 +43,14 @@ def run_mfa(cfg, num_jobs=None, overwrite=False):
     env.setdefault("MFA_ROOT_DIR", os.path.join(cfg["data_root"], "mfa_root"))
     if os.path.isabs(mfa):  # MFA calls kaldi/openfst binaries that live next to it
         env["PATH"] = os.path.dirname(mfa) + os.pathsep + env.get("PATH", "")
-    common = ["-j", jobs, "--clean", "--overwrite", "--temporary_directory", temp_dir,
-              "--beam", str(acfg.get("beam", 100)), "--retry_beam", str(acfg.get("retry_beam", 400))]
+    common = ["-j", jobs, "--clean", "--overwrite", "--temporary_directory", temp_dir]
+    if acfg["mode"] == "align":
+        # a wide beam is fine when only aligning with an already-trained model
+        common += ["--beam", str(acfg.get("beam", 100)), "--retry_beam", str(acfg.get("retry_beam", 400))]
 
     n_speakers = len([d for d in os.listdir(raw_path) if os.path.isdir(os.path.join(raw_path, d))])
-    if n_speakers == 1:
-        # otherwise MFA parallelises per speaker and would use a single CPU core
+    if n_speakers <= 2:
+        # otherwise MFA parallelises per speaker and would use only 1-2 CPU cores
         common.append("--single_speaker")
 
     if acfg["mode"] == "align":
@@ -59,7 +61,11 @@ def run_mfa(cfg, num_jobs=None, overwrite=False):
         cmd = [mfa, "align", raw_path, lexicon, model, out_dir] + common
     elif acfg["mode"] == "train":
         model_out = os.path.join(pcfg["path"]["preprocessed_path"], "mfa_acoustic_model.zip")
-        cmd = [mfa, "train", raw_path, lexicon, model_out, "--output_directory", out_dir] + common
+        # Short monophone+triphone recipe with MFA's normal beam (see mfa_train_config.yaml).
+        # MFA's default recipe plus a very wide beam took hours for this corpus size.
+        train_cfg = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mfa_train_config.yaml")
+        cmd = [mfa, "train", raw_path, lexicon, model_out, "--output_directory", out_dir,
+               "-c", train_cfg] + common
     else:
         raise ValueError("alignment.mode must be 'align' or 'train'")
     print("[align] running:", " ".join(cmd))
