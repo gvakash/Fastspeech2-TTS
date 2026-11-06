@@ -1,0 +1,38 @@
+{
+ "dataset": "SPRINGLab/IndicTTS_Telugu",
+ "rows_scanned": 8576,
+ "hours_scanned": 36.712,
+ "dropped": {
+  "drop_duration": 3233,
+  "drop_text_unexpected_chars": 2,
+  "drop_text_latin_letters": 11
+ },
+ "snr_threshold_db": null,
+ "candidate_hours_after_filtering": 11.842,
+ "train": {
+  "utterances": 2192,
+  "hours": 5.002,
+  "speakers": 2
+ },
+ "val": {
+  "utterances": 440,
+  "hours": 1.001,
+  "speakers": 2
+ },
+ "overlap_check": "no shared utterance ids and no shared transcripts between train and val",
+ "duration_filter_sec": [
+  1.0,
+  15.0
+ ],
+ "seed": 1234,
+ "per_speaker_hours": {
+  "female": {
+   "train": 2.658,
+   "val": 0.505
+  },
+  "male": {
+   "train": 2.344,
+   "val": 0.495
+  }
+ }
+}

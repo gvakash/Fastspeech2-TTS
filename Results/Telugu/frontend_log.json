@@ -1,0 +1,235 @@
+{
+ "checkpoint": "11000",
+ "speaker": "female",
+ "speaker_id": 0,
+ "controls": {
+  "pitch": 1.0,
+  "energy": 1.0,
+  "duration": 1.0
+ },
+ "sentences": [
+  {
+   "id": "T1",
+   "text": "న్యూరోఫార్మకోలాజికల్ పరిశోధనలో నూతన ఔషధాల ప్రభావాన్ని విశ్లేషించారు.",
+   "normalised": "న్యూరోఫార్మకోలాజికల్ పరిశోధనలో నూతన ఔషధాల ప్రభావాన్ని విశ్లేషించారు .",
+   "phones": "n y uu r oo ph aa r m a k oo l aa j i k a l p a r i sh oo dh a n a l oo n uu t a n a au ss a dh aa l a p r a bh aa v aa n n i v i sh l ee ss i ny ch aa r u",
+   "n_phones": 66,
+   "words": [
+    [
+     "న్యూరోఫార్మకోలాజికల్",
+     "n y uu r oo ph aa r m a k oo l aa j i k a l"
+    ],
+    [
+     "పరిశోధనలో",
+     "p a r i sh oo dh a n a l oo"
+    ],
+    [
+     "నూతన",
+     "n uu t a n a"
+    ],
+    [
+     "ఔషధాల",
+     "au ss a dh aa l a"
+    ],
+    [
+     "ప్రభావాన్ని",
+     "p r a bh aa v aa n n i"
+    ],
+    [
+     "విశ్లేషించారు",
+     "v i sh l ee ss i ny ch aa r u"
+    ]
+   ],
+   "audio_seconds": 5.375,
+   "mean_f0_pred_hz": 210.0
+  },
+  {
+   "id": "T2a",
+   "text": "తాడుపై అతని పట్టు చాలా బలంగా ఉంది.",
+   "normalised": "తాడుపై అతని పట్టు చాలా బలంగా ఉంది .",
+   "phones": "t aa dd u p ai a t a n i p a tt tt u ch aa l aa b a l a ng g aa u n d i",
+   "n_phones": 31,
+   "words": [
+    [
+     "తాడుపై",
+     "t aa dd u p ai"
+    ],
+    [
+     "అతని",
+     "a t a n i"
+    ],
+    [
+     "పట్టు",
+     "p a tt tt u"
+    ],
+    [
+     "చాలా",
+     "ch aa l aa"
+    ],
+    [
+     "బలంగా",
+     "b a l a ng g aa"
+    ],
+    [
+     "ఉంది",
+     "u n d i"
+    ]
+   ],
+   "audio_seconds": 2.554,
+   "mean_f0_pred_hz": 225.0
+  },
+  {
+   "id": "T2b",
+   "text": "ఆమె పట్టు చీరను ధరించి వేడుకకు వచ్చింది.",
+   "normalised": "ఆమె పట్టు చీరను ధరించి వేడుకకు వచ్చింది .",
+   "phones": "aa m e p a tt tt u ch ii r a n u dh a r i ny ch i v ee dd u k a k u v a ch ch i n d i",
+   "n_phones": 37,
+   "words": [
+    [
+     "ఆమె",
+     "aa m e"
+    ],
+    [
+     "పట్టు",
+     "p a tt tt u"
+    ],
+    [
+     "చీరను",
+     "ch ii r a n u"
+    ],
+    [
+     "ధరించి",
+     "dh a r i ny ch i"
+    ],
+    [
+     "వేడుకకు",
+     "v ee dd u k a k u"
+    ],
+    [
+     "వచ్చింది",
+     "v a ch ch i n d i"
+    ]
+   ],
+   "audio_seconds": 2.821,
+   "mean_f0_pred_hz": 214.6
+  },
+  {
+   "id": "T3",
+   "text": "పులి అడ విలో నిశ్శబ్దంగా నడిచింది.",
+   "normalised": "పులి అడ విలో నిశ్శబ్దంగా నడిచింది .",
+   "phones": "p u l i a dd a v i l oo n i sh sh a b d a ng g aa n a dd i ch i n d i",
+   "n_phones": 31,
+   "words": [
+    [
+     "పులి",
+     "p u l i"
+    ],
+    [
+     "అడ",
+     "a dd a"
+    ],
+    [
+     "విలో",
+     "v i l oo"
+    ],
+    [
+     "నిశ్శబ్దంగా",
+     "n i sh sh a b d a ng g aa"
+    ],
+    [
+     "నడిచింది",
+     "n a dd i ch i n d i"
+    ]
+   ],
+   "audio_seconds": 2.206,
+   "mean_f0_pred_hz": 220.5
+  },
+  {
+   "id": "T4",
+   "text": "ఈ సమావేశం 2026 నవంబర్ 12వ తేదీ ఉదయం 10:45 గంటలకు ప్రారంభమవుతుంది, సమయానికి సిద్ధంగా ఉంచండి.",
+   "normalised": "ఈ సమావేశం రెండు వేల ఇరవై ఆరు నవంబర్ పన్నెండవ తేదీ ఉదయం పది నలభై ఐదు గంటలకు ప్రారంభమవుతుంది , సమయానికి సిద్ధంగా ఉంచండి .",
+   "phones": "ii s a m aa v ee sh a m r e nn dd u v ee l a i r a v ai aa r u n a v a m b a r p a n n e nn dd a v a t ee d ii u d a y a m p a d i n a l a bh ai ai d u g a nn tt a l a k u p r aa r a m bh a m a v u t u n d i sp s a m a y aa n i k i s i d dh a ng g aa u ny ch a nn dd i",
+   "n_phones": 120,
+   "words": [
+    [
+     "ఈ",
+     "ii"
+    ],
+    [
+     "సమావేశం",
+     "s a m aa v ee sh a m"
+    ],
+    [
+     "రెండు",
+     "r e nn dd u"
+    ],
+    [
+     "వేల",
+     "v ee l a"
+    ],
+    [
+     "ఇరవై",
+     "i r a v ai"
+    ],
+    [
+     "ఆరు",
+     "aa r u"
+    ],
+    [
+     "నవంబర్",
+     "n a v a m b a r"
+    ],
+    [
+     "పన్నెండవ",
+     "p a n n e nn dd a v a"
+    ],
+    [
+     "తేదీ",
+     "t ee d ii"
+    ],
+    [
+     "ఉదయం",
+     "u d a y a m"
+    ],
+    [
+     "పది",
+     "p a d i"
+    ],
+    [
+     "నలభై",
+     "n a l a bh ai"
+    ],
+    [
+     "ఐదు",
+     "ai d u"
+    ],
+    [
+     "గంటలకు",
+     "g a nn tt a l a k u"
+    ],
+    [
+     "ప్రారంభమవుతుంది",
+     "p r aa r a m bh a m a v u t u n d i"
+    ],
+    [
+     "<pause>",
+     "sp"
+    ],
+    [
+     "సమయానికి",
+     "s a m a y aa n i k i"
+    ],
+    [
+     "సిద్ధంగా",
+     "s i d dh a ng g aa"
+    ],
+    [
+     "ఉంచండి",
+     "u ny ch a nn dd i"
+    ]
+   ],
+   "audio_seconds": 9.16,
+   "mean_f0_pred_hz": 207.7
+  }
+ ]
+}

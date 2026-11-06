@@ -1,0 +1,319 @@
+{
+ "checkpoint": "31000",
+ "speaker": "spk_7ca84f50",
+ "speaker_id": 51,
+ "controls": {
+  "pitch": 1.0,
+  "energy": 1.0,
+  "duration": 1.0
+ },
+ "sentences": [
+  {
+   "id": "E1",
+   "text": "The antidisestablishmentarianism movement gained considerable momentum during the parliamentary proceedings.",
+   "normalised": "the antidisestablishmentarianism movement gained considerable momentum during the parliamentary proceedings .",
+   "phones": "DH AH0 AE2 N T AY0 D IH0 S AH0 S T AE2 B L IH0 SH M AH0 N T EH1 R IY0 AH0 N IH0 Z AH0 M M UW1 V M AH0 N T G EY1 N D K AH0 N S IH1 D ER0 AH0 B AH0 L M OW0 M EH1 N T AH0 M D UH1 R IH0 NG DH AH0 P AA2 R L AH0 M EH1 N T ER0 IY0 P R OW0 S IY1 D IH0 NG Z",
+   "n_phones": 87,
+   "words": [
+    [
+     "the",
+     "DH AH0"
+    ],
+    [
+     "antidisestablishmentarianism",
+     "AE2 N T AY0 D IH0 S AH0 S T AE2 B L IH0 SH M AH0 N T EH1 R IY0 AH0 N IH0 Z AH0 M"
+    ],
+    [
+     "movement",
+     "M UW1 V M AH0 N T"
+    ],
+    [
+     "gained",
+     "G EY1 N D"
+    ],
+    [
+     "considerable",
+     "K AH0 N S IH1 D ER0 AH0 B AH0 L"
+    ],
+    [
+     "momentum",
+     "M OW0 M EH1 N T AH0 M"
+    ],
+    [
+     "during",
+     "D UH1 R IH0 NG"
+    ],
+    [
+     "the",
+     "DH AH0"
+    ],
+    [
+     "parliamentary",
+     "P AA2 R L AH0 M EH1 N T ER0 IY0"
+    ],
+    [
+     "proceedings",
+     "P R OW0 S IY1 D IH0 NG Z"
+    ]
+   ],
+   "audio_seconds": 6.676,
+   "mean_f0_pred_hz": 211.4
+  },
+  {
+   "id": "E2a",
+   "text": "The orchestra's conduct during the ceremony was praised by the audience.",
+   "normalised": "the orchestra's conduct during the ceremony was praised by the audience .",
+   "phones": "DH AH0 AO1 R K AH0 S T R AH0 Z K AA1 N D AH0 K T D UH1 R IH0 NG DH AH0 S EH1 R AH0 M OW2 N IY0 W AA1 Z P R EY1 Z D B AY1 DH AH0 AA1 D IY0 AH0 N S",
+   "n_phones": 51,
+   "words": [
+    [
+     "the",
+     "DH AH0"
+    ],
+    [
+     "orchestra's",
+     "AO1 R K AH0 S T R AH0 Z"
+    ],
+    [
+     "conduct",
+     "K AA1 N D AH0 K T"
+    ],
+    [
+     "during",
+     "D UH1 R IH0 NG"
+    ],
+    [
+     "the",
+     "DH AH0"
+    ],
+    [
+     "ceremony",
+     "S EH1 R AH0 M OW2 N IY0"
+    ],
+    [
+     "was",
+     "W AA1 Z"
+    ],
+    [
+     "praised",
+     "P R EY1 Z D"
+    ],
+    [
+     "by",
+     "B AY1"
+    ],
+    [
+     "the",
+     "DH AH0"
+    ],
+    [
+     "audience",
+     "AA1 D IY0 AH0 N S"
+    ]
+   ],
+   "audio_seconds": 3.994,
+   "mean_f0_pred_hz": 201.3
+  },
+  {
+   "id": "E2b",
+   "text": "The researchers will conduct an experiment to evaluate the proposed method.",
+   "normalised": "the researchers will conduct an experiment to evaluate the proposed method .",
+   "phones": "DH AH0 R IY1 S ER0 CH ER0 Z W IH1 L K AA0 N D AH1 K T AE1 N IH0 K S P EH1 R AH0 M AH0 N T T UW1 IH0 V AE1 L Y UW0 EY2 T DH AH0 P R AH0 P OW1 Z D M EH1 TH AH0 D",
+   "n_phones": 56,
+   "words": [
+    [
+     "the",
+     "DH AH0"
+    ],
+    [
+     "researchers",
+     "R IY1 S ER0 CH ER0 Z"
+    ],
+    [
+     "will",
+     "W IH1 L"
+    ],
+    [
+     "conduct",
+     "K AA0 N D AH1 K T"
+    ],
+    [
+     "an",
+     "AE1 N"
+    ],
+    [
+     "experiment",
+     "IH0 K S P EH1 R AH0 M AH0 N T"
+    ],
+    [
+     "to",
+     "T UW1"
+    ],
+    [
+     "evaluate",
+     "IH0 V AE1 L Y UW0 EY2 T"
+    ],
+    [
+     "the",
+     "DH AH0"
+    ],
+    [
+     "proposed",
+     "P R AH0 P OW1 Z D"
+    ],
+    [
+     "method",
+     "M EH1 TH AH0 D"
+    ]
+   ],
+   "audio_seconds": 4.389,
+   "mean_f0_pred_hz": 202.6
+  },
+  {
+   "id": "E3",
+   "text": "The rhyth m of the orchestra changed unexpectedly.",
+   "normalised": "the rhyth m of the orchestra changed unexpectedly .",
+   "phones": "DH AH0 R AY1 DH EH1 M AH1 V DH AH0 AO1 R K AH0 S T R AH0 CH EY1 N JH D AH2 N IH0 K S P EH1 K T IH0 D L IY0",
+   "n_phones": 37,
+   "words": [
+    [
+     "the",
+     "DH AH0"
+    ],
+    [
+     "rhyth",
+     "R AY1 DH"
+    ],
+    [
+     "m",
+     "EH1 M"
+    ],
+    [
+     "of",
+     "AH1 V"
+    ],
+    [
+     "the",
+     "DH AH0"
+    ],
+    [
+     "orchestra",
+     "AO1 R K AH0 S T R AH0"
+    ],
+    [
+     "changed",
+     "CH EY1 N JH D"
+    ],
+    [
+     "unexpectedly",
+     "AH2 N IH0 K S P EH1 K T IH0 D L IY0"
+    ]
+   ],
+   "audio_seconds": 3.077,
+   "mean_f0_pred_hz": 217.9
+  },
+  {
+   "id": "E4",
+   "text": "The meeting will start at 10:45 AM on 12 November 2026, so andaroo should arrive on time.",
+   "normalised": "the meeting will start at ten forty five a_ m_ on twelfth november twenty twenty six , so andaroo should arrive on time .",
+   "phones": "DH AH0 M IY1 T IH0 NG W IH1 L S T AA1 R T AE1 T T EH1 N F AO1 R T IY0 F AY1 V EY1 EH1 M AA1 N T W EH1 L F TH N OW0 V EH1 M B ER0 T W EH1 N T IY0 T W EH1 N T IY0 S IH1 K S sp S OW1 AE0 N D AA1 R OW0 SH UH1 D ER0 AY1 V AA1 N T AY1 M",
+   "n_phones": 82,
+   "words": [
+    [
+     "the",
+     "DH AH0"
+    ],
+    [
+     "meeting",
+     "M IY1 T IH0 NG"
+    ],
+    [
+     "will",
+     "W IH1 L"
+    ],
+    [
+     "start",
+     "S T AA1 R T"
+    ],
+    [
+     "at",
+     "AE1 T"
+    ],
+    [
+     "ten",
+     "T EH1 N"
+    ],
+    [
+     "forty",
+     "F AO1 R T IY0"
+    ],
+    [
+     "five",
+     "F AY1 V"
+    ],
+    [
+     "A",
+     "EY1"
+    ],
+    [
+     "M",
+     "EH1 M"
+    ],
+    [
+     "on",
+     "AA1 N"
+    ],
+    [
+     "twelfth",
+     "T W EH1 L F TH"
+    ],
+    [
+     "november",
+     "N OW0 V EH1 M B ER0"
+    ],
+    [
+     "twenty",
+     "T W EH1 N T IY0"
+    ],
+    [
+     "twenty",
+     "T W EH1 N T IY0"
+    ],
+    [
+     "six",
+     "S IH1 K S"
+    ],
+    [
+     "<pause>",
+     "sp"
+    ],
+    [
+     "so",
+     "S OW1"
+    ],
+    [
+     "andaroo",
+     "AE0 N D AA1 R OW0"
+    ],
+    [
+     "should",
+     "SH UH1 D"
+    ],
+    [
+     "arrive",
+     "ER0 AY1 V"
+    ],
+    [
+     "on",
+     "AA1 N"
+    ],
+    [
+     "time",
+     "T AY1 M"
+    ]
+   ],
+   "audio_seconds": 7.117,
+   "mean_f0_pred_hz": 212.4
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "last_step": 30900,
+ "n_val_points": 31,
+ "total": {
+  "train_first": 8.1789,
+  "train_last_avg": 0.728,
+  "val_first": 2.2921,
+  "val_best": 1.9712,
+  "val_best_step": 11000,
+  "val_last": 1.9722,
+  "gap_last_val_minus_train": 1.2442
+ },
+ "mel": {
+  "train_first": 3.335,
+  "train_last_avg": 0.3409,
+  "val_first": 0.7368,
+  "val_best": 0.602,
+  "val_best_step": 10000,
+  "val_last": 0.6062,
+  "gap_last_val_minus_train": 0.2653
+ },
+ "mel_postnet": {
+  "train_first": 2.8328,
+  "train_last_avg": 0.3405,
+  "val_first": 0.7483,
+  "val_best": 0.6017,
+  "val_best_step": 10000,
+  "val_last": 0.6059,
+  "gap_last_val_minus_train": 0.2654
+ },
+ "pitch": {
+  "train_first": 0.9067,
+  "train_last_avg": 0.0206,
+  "val_first": 0.521,
+  "val_best": 0.5037,
+  "val_best_step": 26000,
+  "val_last": 0.5039,
+  "gap_last_val_minus_train": 0.4833
+ },
+ "energy": {
+  "train_first": 0.801,
+  "train_last_avg": 0.0181,
+  "val_first": 0.2197,
+  "val_best": 0.1977,
+  "val_best_step": 16000,
+  "val_last": 0.1994,
+  "gap_last_val_minus_train": 0.1813
+ },
+ "duration": {
+  "train_first": 0.3034,
+  "train_last_avg": 0.0079,
+  "val_first": 0.0663,
+  "val_best": 0.0544,
+  "val_best_step": 7000,
+  "val_last": 0.0567,
+  "gap_last_val_minus_train": 0.0489
+ }
+}

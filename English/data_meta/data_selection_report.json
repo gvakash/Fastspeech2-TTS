@@ -1,0 +1,486 @@
+{
+ "dataset": "ai4bharat/Svarah",
+ "rows_scanned": 6656,
+ "hours_scanned": 9.614,
+ "dropped": {
+  "drop_duration": 1476,
+  "drop_text_too_short": 57,
+  "drop_snr": 513
+ },
+ "snr_threshold_db": 22.81982307434082,
+ "candidate_hours_after_filtering": 7.293,
+ "train": {
+  "utterances": 3192,
+  "hours": 5.001,
+  "speakers": 114
+ },
+ "val": {
+  "utterances": 632,
+  "hours": 1.002,
+  "speakers": 112
+ },
+ "overlap_check": "no shared utterance ids and no shared transcripts between train and val",
+ "duration_filter_sec": [
+  1.0,
+  15.0
+ ],
+ "seed": 1234,
+ "per_speaker_hours": {
+  "spk_05330e68": {
+   "train": 0.021,
+   "val": 0.005
+  },
+  "spk_061674b1": {
+   "train": 0.038,
+   "val": 0.01
+  },
+  "spk_07a64297": {
+   "train": 0.088,
+   "val": 0.011
+  },
+  "spk_07d08a0f": {
+   "train": 0.02,
+   "val": 0.006
+  },
+  "spk_09ba5012": {
+   "train": 0.022,
+   "val": 0.007
+  },
+  "spk_0a7bae5a": {
+   "train": 0.061,
+   "val": 0.006
+  },
+  "spk_0c10633a": {
+   "train": 0.064,
+   "val": 0.01
+  },
+  "spk_0e19b01d": {
+   "train": 0.009,
+   "val": 0.008
+  },
+  "spk_159a5ee2": {
+   "train": 0.085,
+   "val": 0.012
+  },
+  "spk_1672f268": {
+   "train": 0.008,
+   "val": 0.013
+  },
+  "spk_18ad5428": {
+   "train": 0.016,
+   "val": 0.009
+  },
+  "spk_1c59fce1": {
+   "train": 0.034,
+   "val": 0.006
+  },
+  "spk_1f0a057d": {
+   "train": 0.034,
+   "val": 0.014
+  },
+  "spk_26c14843": {
+   "train": 0.042,
+   "val": 0.015
+  },
+  "spk_28885c30": {
+   "train": 0.08,
+   "val": 0.014
+  },
+  "spk_2b319b0b": {
+   "train": 0.02,
+   "val": 0.008
+  },
+  "spk_2bdd3910": {
+   "train": 0.088,
+   "val": 0.009
+  },
+  "spk_2e24587b": {
+   "train": 0.007,
+   "val": 0.01
+  },
+  "spk_2f72a6b3": {
+   "train": 0.07,
+   "val": 0.003
+  },
+  "spk_315efb6f": {
+   "train": 0.071,
+   "val": 0.018
+  },
+  "spk_3210024f": {
+   "train": 0.079,
+   "val": 0.01
+  },
+  "spk_363eb2dd": {
+   "train": 0.027,
+   "val": 0.009
+  },
+  "spk_3834f1c1": {
+   "train": 0.069,
+   "val": 0.004
+  },
+  "spk_38de48e0": {
+   "train": 0.051,
+   "val": 0.008
+  },
+  "spk_3a26ae56": {
+   "train": 0.047,
+   "val": 0.011
+  },
+  "spk_3f9468bd": {
+   "train": 0.02,
+   "val": 0.005
+  },
+  "spk_40215e6b": {
+   "train": 0.044,
+   "val": 0.012
+  },
+  "spk_40ee9605": {
+   "train": 0.002,
+   "val": 0.0
+  },
+  "spk_4528c9d3": {
+   "train": 0.017,
+   "val": 0.008
+  },
+  "spk_45b96846": {
+   "train": 0.026,
+   "val": 0.01
+  },
+  "spk_4a20375b": {
+   "train": 0.033,
+   "val": 0.014
+  },
+  "spk_4c046bd9": {
+   "train": 0.01,
+   "val": 0.015
+  },
+  "spk_4ca697bf": {
+   "train": 0.106,
+   "val": 0.015
+  },
+  "spk_4e725862": {
+   "train": 0.029,
+   "val": 0.005
+  },
+  "spk_4f5198b5": {
+   "train": 0.074,
+   "val": 0.012
+  },
+  "spk_50dac51b": {
+   "train": 0.058,
+   "val": 0.004
+  },
+  "spk_5104bfc2": {
+   "train": 0.015,
+   "val": 0.005
+  },
+  "spk_51aec32f": {
+   "train": 0.052,
+   "val": 0.011
+  },
+  "spk_5e0ae12b": {
+   "train": 0.095,
+   "val": 0.011
+  },
+  "spk_5e1ee7bc": {
+   "train": 0.082,
+   "val": 0.013
+  },
+  "spk_64668aa8": {
+   "train": 0.02,
+   "val": 0.009
+  },
+  "spk_648c7d19": {
+   "train": 0.11,
+   "val": 0.011
+  },
+  "spk_6684072f": {
+   "train": 0.014,
+   "val": 0.01
+  },
+  "spk_681a5761": {
+   "train": 0.013,
+   "val": 0.005
+  },
+  "spk_68e40f33": {
+   "train": 0.006,
+   "val": 0.009
+  },
+  "spk_69b998c7": {
+   "train": 0.001,
+   "val": 0.005
+  },
+  "spk_719bbe82": {
+   "train": 0.06,
+   "val": 0.006
+  },
+  "spk_7881fd21": {
+   "train": 0.043,
+   "val": 0.004
+  },
+  "spk_79149f47": {
+   "train": 0.047,
+   "val": 0.011
+  },
+  "spk_7a01a130": {
+   "train": 0.01,
+   "val": 0.009
+  },
+  "spk_7b8a2450": {
+   "train": 0.093,
+   "val": 0.01
+  },
+  "spk_7ca84f50": {
+   "train": 0.123,
+   "val": 0.008
+  },
+  "spk_8063b969": {
+   "train": 0.036,
+   "val": 0.012
+  },
+  "spk_8150bedf": {
+   "train": 0.067,
+   "val": 0.007
+  },
+  "spk_847828e1": {
+   "train": 0.008,
+   "val": 0.009
+  },
+  "spk_84f04da8": {
+   "train": 0.082,
+   "val": 0.01
+  },
+  "spk_88fde089": {
+   "train": 0.025,
+   "val": 0.008
+  },
+  "spk_89c78e70": {
+   "train": 0.026,
+   "val": 0.01
+  },
+  "spk_8c8b096f": {
+   "train": 0.02,
+   "val": 0.01
+  },
+  "spk_8eb50476": {
+   "train": 0.06,
+   "val": 0.008
+  },
+  "spk_8f8ba735": {
+   "train": 0.103,
+   "val": 0.009
+  },
+  "spk_93f2bf55": {
+   "train": 0.041,
+   "val": 0.01
+  },
+  "spk_947711fb": {
+   "train": 0.017,
+   "val": 0.01
+  },
+  "spk_955c03da": {
+   "train": 0.036,
+   "val": 0.007
+  },
+  "spk_9842ddc5": {
+   "train": 0.024,
+   "val": 0.007
+  },
+  "spk_9b84e762": {
+   "train": 0.022,
+   "val": 0.006
+  },
+  "spk_9d1c90d4": {
+   "train": 0.032,
+   "val": 0.01
+  },
+  "spk_9d61598b": {
+   "train": 0.084,
+   "val": 0.008
+  },
+  "spk_9f9079b8": {
+   "train": 0.08,
+   "val": 0.008
+  },
+  "spk_a0a0232d": {
+   "train": 0.01,
+   "val": 0.01
+  },
+  "spk_a1f68c51": {
+   "train": 0.038,
+   "val": 0.01
+  },
+  "spk_a3635f00": {
+   "train": 0.017,
+   "val": 0.006
+  },
+  "spk_a6079402": {
+   "train": 0.097,
+   "val": 0.008
+  },
+  "spk_ac979e34": {
+   "train": 0.065,
+   "val": 0.005
+  },
+  "spk_b4a1154d": {
+   "train": 0.005,
+   "val": 0.007
+  },
+  "spk_bb13a787": {
+   "train": 0.021,
+   "val": 0.006
+  },
+  "spk_bc1747f2": {
+   "train": 0.075,
+   "val": 0.008
+  },
+  "spk_bff59894": {
+   "train": 0.007,
+   "val": 0.011
+  },
+  "spk_c0a0a90b": {
+   "train": 0.026,
+   "val": 0.008
+  },
+  "spk_c577c0fc": {
+   "train": 0.002,
+   "val": 0.004
+  },
+  "spk_c57bd977": {
+   "train": 0.017,
+   "val": 0.009
+  },
+  "spk_c5fc3ea9": {
+   "train": 0.061,
+   "val": 0.006
+  },
+  "spk_c921eab6": {
+   "train": 0.034,
+   "val": 0.009
+  },
+  "spk_ca25e939": {
+   "train": 0.031,
+   "val": 0.007
+  },
+  "spk_cbf3fb3d": {
+   "train": 0.035,
+   "val": 0.006
+  },
+  "spk_cfdf65f7": {
+   "train": 0.1,
+   "val": 0.013
+  },
+  "spk_d154ccec": {
+   "train": 0.089,
+   "val": 0.008
+  },
+  "spk_d181dfe8": {
+   "train": 0.013,
+   "val": 0.009
+  },
+  "spk_d270faea": {
+   "train": 0.114,
+   "val": 0.011
+  },
+  "spk_d2f8b715": {
+   "train": 0.014,
+   "val": 0.007
+  },
+  "spk_d3c3012b": {
+   "train": 0.089,
+   "val": 0.01
+  },
+  "spk_d6e1ff15": {
+   "train": 0.054,
+   "val": 0.011
+  },
+  "spk_d8a49918": {
+   "train": 0.002,
+   "val": 0.0
+  },
+  "spk_dbe8a6f2": {
+   "train": 0.032,
+   "val": 0.011
+  },
+  "spk_dc5e8550": {
+   "train": 0.011,
+   "val": 0.017
+  },
+  "spk_dd89732d": {
+   "train": 0.062,
+   "val": 0.007
+  },
+  "spk_dec98adb": {
+   "train": 0.02,
+   "val": 0.014
+  },
+  "spk_ded114f6": {
+   "train": 0.019,
+   "val": 0.008
+  },
+  "spk_e3388f59": {
+   "train": 0.022,
+   "val": 0.007
+  },
+  "spk_e33fa219": {
+   "train": 0.027,
+   "val": 0.005
+  },
+  "spk_e4ada8ea": {
+   "train": 0.047,
+   "val": 0.009
+  },
+  "spk_e58eda7c": {
+   "train": 0.034,
+   "val": 0.007
+  },
+  "spk_e81f2197": {
+   "train": 0.036,
+   "val": 0.008
+  },
+  "spk_e889cf77": {
+   "train": 0.064,
+   "val": 0.009
+  },
+  "spk_eaea8c5d": {
+   "train": 0.102,
+   "val": 0.008
+  },
+  "spk_f0bb6d4e": {
+   "train": 0.066,
+   "val": 0.004
+  },
+  "spk_f0fd6ddf": {
+   "train": 0.076,
+   "val": 0.005
+  },
+  "spk_f26770b6": {
+   "train": 0.012,
+   "val": 0.013
+  },
+  "spk_f4f263d2": {
+   "train": 0.004,
+   "val": 0.009
+  },
+  "spk_f9d3940d": {
+   "train": 0.032,
+   "val": 0.015
+  },
+  "spk_fa6ce432": {
+   "train": 0.04,
+   "val": 0.007
+  },
+  "spk_fae3eb5f": {
+   "train": 0.086,
+   "val": 0.009
+  },
+  "spk_fb8214e6": {
+   "train": 0.017,
+   "val": 0.009
+  },
+  "spk_fe25acaa": {
+   "train": 0.059,
+   "val": 0.007
+  }
+ }
+}
