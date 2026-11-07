@@ -100,7 +100,7 @@ This runs four stages, which you can also run one at a time with `--stage`:
    ~5 h for training and ~1 h for validation. The two sets never share a sentence.
 2. `lexicon`: builds the word-to-phone dictionary that MFA needs.
 3. `align`: runs MFA to find where each phone starts and ends. English uses MFA's pretrained English
-   model. There is no pretrained Telugu model, so for Telugu an aligner is trained on the same 5 h first.
+   model. MFA has no Telugu model of its own, so for Telugu an aligner is trained on the same 5 h first.
 4. `features`: extracts mel spectrograms, pitch, energy and phone durations.
 
 A stage is skipped if its output already exists. Add `--overwrite` to run it again. The audio and
@@ -133,14 +133,15 @@ The notebook runs everything above and gives you a zip of the results. See
 
 ## What I changed from ming024/FastSpeech2
 
-The model itself (encoder, variance adaptor, decoder, HiFi-GAN vocoder) is unchanged. Most of the
-work was around it:
+The model itself (encoder, variance adaptor, decoder, HiFi-GAN vocoder) is unchanged, apart from the
+`--energy_control` fix below. Most of the work was around it:
 
 - **English text handling.** Times, dates and numbers are written out in words ("10:45 AM" becomes
   "ten forty five A M"). Words like "conduct" are pronounced according to whether they're a noun or a verb.
 - **Telugu text handling.** A rule-based converter turns Telugu script into phones, and Telugu
   numbers, dates and times are written out in words.
-- **Telugu aligner.** No pretrained Telugu MFA model was available, so I trained one on the Telugu data.
+- **Telugu aligner.** MFA's own model list has no Telugu acoustic model, so I trained one on the
+  Telugu data. AI4Bharat's IndicMFA does offer one, but I didn't use it.
 - **Bug fixes.** Pauses in newer MFA output were being dropped, which shifted the timing of everything
   after them. Also, `--energy_control` didn't work, because the code used the pitch value for energy.
 - **Training.** A time budget for Kaggle, resuming, CSV loss logs and best-checkpoint tracking.
@@ -155,7 +156,8 @@ Every change is listed in `extras/CHANGES.md`.
 - The speech is understandable but sounds robotic. Two people listened to the Telugu audio without
   being told what it was. Both found the pacing unnatural (one called it very fast), and one said
   the pronunciation was correct.
-- The models hardly ever pause, except at commas.
+- The models only pause at punctuation inside a sentence. In the test sentences, that means just the
+  commas in E4 and T4.
 - "rhyth m" in E3 comes out as "raitham", and the Telugu word "andaroo" in E4 gets English vowels.
 - The Telugu aligner was trained on only 5 h of audio, and some phone timings are off. AI4Bharat's
   IndicMFA would probably do better, but I didn't get to try it.
