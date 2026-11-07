@@ -1,6 +1,6 @@
 # FastSpeech 2 for English (Svarah) and Telugu (IndicTTS)
 
-Two separately trained FastSpeech 2 text-to-speech models, built on
+Two separately trained FastSpeech 2 text-to-speech models for English and Telugu, built on
 [ming024/FastSpeech2](https://github.com/ming024/FastSpeech2) (paper: Ren et al., 2020,
 [arXiv:2006.04558](https://arxiv.org/abs/2006.04558)).
 
@@ -12,7 +12,7 @@ Two separately trained FastSpeech 2 text-to-speech models, built on
 | Front-end | text normaliser + sentence-level POS-aware G2P (g2p_en) | Telugu G2P (inherent vowel, virama, anusvara assimilation) + Telugu number expansion |
 | Alignment | MFA, pretrained `english_us_arpa` | MFA acoustic model trained on the Telugu corpus |
 | Speakers | multi-speaker (speaker embedding) | single speaker (female) |
-| Vocoder | HiFi-GAN universal (pretrained, from ming024) | same |
+| Vocoder | HiFi-GAN universal (pretrained, from ming024) | Vocoder | HiFi-GAN universal (pretrained, from ming024) |
 
 ## Repository layout
 
