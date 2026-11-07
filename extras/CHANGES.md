@@ -51,10 +51,12 @@ copied files are marked with `[MODIFIED]` comments.
 * **Telugu text normalisation**: Telugu digits → ASCII; cardinals in the Indian system
   (2026 → రెండు వేల ఇరవై ఆరు), ordinals with -వ (12వ → పన్నెండవ), clock times
   (10:45 → పది నలభై ఐదు), decimals, percentages.
-* **Alignment**: no pretrained Telugu MFA model exists, so an MFA GMM-HMM acoustic model is trained
-  on the selected Telugu data (`mfa train`, single-speaker mode) with the rule-based lexicon.
-* **Data selection**: single female speaker when she has ≥ 6 h of 1–15 s clips (automatic fallback to
-  both speakers with speaker embedding otherwise); transcripts with Latin letters or unexpected
-  characters removed.
+* **Alignment**: MFA's own model list has no Telugu acoustic model (AI4Bharat's IndicMFA offers one,
+  but it was not used), so an MFA GMM-HMM acoustic model is trained on the selected Telugu data
+  (`mfa train --single_speaker`) with the rule-based lexicon.
+* **Data selection**: the config prefers the female speaker alone if she has ≥ 6 h of 1–15 s clips,
+  and otherwise falls back to both speakers with a speaker embedding. She had less than that, so
+  **both voices were used** in the submitted model. Transcripts with Latin letters or unexpected
+  characters are removed.
 * **Plots** label Telugu words in romanised form because matplotlib cannot shape Telugu conjuncts;
   the CSV/JSON outputs keep the Telugu script.
